@@ -1,0 +1,33 @@
+/* Estilos personalizados y utilidades */
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-bg {
+  /* La ruta cambia relativo a este archivo para llegar a media */
+  background-image: linear-gradient(rgba(11, 36, 71, 0.7), rgba(11, 36, 71, 0.7)), url('../media/fondo1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.gallery-img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* Ocultar menú móvil por defecto */
+#mobile-menu {
+  transition: max-height 0.3s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+#mobile-menu.open {
+  max-height: 300px;
+}
